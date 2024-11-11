@@ -14,5 +14,5 @@ func main() {
 	
 	router := routes.RouterSetup()
 
-	router.Run("localhost:8001")
+	router.Run()
 }

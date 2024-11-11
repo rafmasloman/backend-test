@@ -20,6 +20,6 @@ func ConnectDB() {
         fmt.Printf("Failed to connect to database: %v", err)
     }
 
-	err = DB.AutoMigrate(&models.User{})
+	err = DB.AutoMigrate(&models.Customer{})
     fmt.Println("Database connected successfully!")
 }

@@ -20,13 +20,14 @@ func RouterSetup() *gin.Engine {
 	}))
 
 	
-	userRoutes := router.Group("/users") 
+	customerRoutes := router.Group("/api/v1/customer") 
+	
 	{
-		userRoutes.GET("/", controllers.GetAllUsers)
-		userRoutes.POST("/", controllers.CreateUser)
-		userRoutes.GET("/:id", controllers.GetDetailUser)
-		userRoutes.PUT("/:id", controllers.UpdateUser)
-		userRoutes.DELETE("/:id", controllers.DeleteUser)
+		customerRoutes.GET("/", controllers.GetAllCustomers)
+		customerRoutes.POST("/", controllers.CreateCustomer)
+		customerRoutes.GET("/:id", controllers.GetDetailCustomer)
+		customerRoutes.PUT("/:id", controllers.UpdateCustomer)
+		customerRoutes.DELETE("/:id", controllers.DeleteCustomer)
 	}
 
 	return router

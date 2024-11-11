@@ -1,6 +1,6 @@
 package models
 
-type User struct {
+type Customer struct {
 	ID        uint   `gorm:"primaryKey"`
 	Name      string `json:"Name" binding:"required"`
 	BirthDate string `json:"BirthDate" binding:"required"`
